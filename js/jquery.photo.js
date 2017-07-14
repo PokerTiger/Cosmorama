@@ -25,7 +25,6 @@ function waterfall() {
                'top':minH+'px',
                'left':minHIndex*w+'px'
            })
-           console.log(minH)
            hArr[minHIndex]+=$boxs.eq(index).outerHeight();
     }
     })

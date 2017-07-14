@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Ptoto</title>
+    <!--<meta name="viewport"content="width=device-width,initial-scale=q,maximum-scale=1,-->
+    <!--minimum-scale=1,user-scalable=no"/>-->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.photo.js"></script>
     <link href="css/photo.css" rel="stylesheet"/>
-    <script src="js/stickUp.min.js"></script>
+    <script src="js/stickUp.js"></script>
     <link href="css/index.css" rel="stylesheet"/>
 
 </head>
 <body>
 <div>
 
-    <header class="top">
+    <header class="navbar">
 
         <div class="title">一块木板</div>
         <nav class="nav_1">
@@ -178,8 +180,7 @@
 <script type="text/javascript">
     jQuery(function ($) {
         $(document).ready(function () {
-            console.log("aaa");
-            $('.top').stickUp();
+            $('.navbar').stickUp();
         });
 
     });

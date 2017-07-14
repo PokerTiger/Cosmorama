@@ -2,7 +2,8 @@ jQuery(
 function($) {
 	
 	$(document).ready(function(){
-		var contentButton = [];
+
+        var contentButton = [];
 		var contentTop = [];
 		var content = [];
 		var lastScrollTop = 0;
@@ -63,7 +64,8 @@ function($) {
 			stickyMarginB = parseInt($(this).css('margin-bottom'));
 			currentMarginT = parseInt($(this).next().closest('div').css('margin-top'));
 			vartop = parseInt($(this).offset().top);
-			//$(this).find('*').removeClass(itemHover);
+
+            //$(this).find('*').removeClass(itemHover);
 		}
 		$(document).on('scroll', function() {
 			varscroll = parseInt($(document).scrollTop());
@@ -76,23 +78,26 @@ function($) {
 						testView = contentTop[i] - contentView;
 						//console.log(varscroll);
 						if(varscroll > testView){
-							$('.'+itemClass).removeClass(itemHover);
-							$('.'+itemClass+':eq('+i+')').addClass(itemHover);
+
+							$('.' + itemClass).removeClass(itemHover);
+							$('.' +itemClass+':eq('+i+')').addClass(itemHover);
 						} else if(varscroll < 50){
-							$('.'+itemClass).removeClass(itemHover);
-							$('.'+itemClass+':eq(0)').addClass(itemHover);
+							$('.' +itemClass).removeClass(itemHover);
+							$('.' +itemClass+':eq(0)').addClass(itemHover);
 						}
 					}
 					if(scrollDir == 'down' && varscroll > contentTop[i]-50 && varscroll < contentTop[i]+50) {
-						$('.'+itemClass).removeClass(itemHover);
-						$('.'+itemClass+':eq('+i+')').addClass(itemHover);
+						$('.' +itemClass).removeClass(itemHover);
+						$('.' +itemClass+':eq('+i+')').addClass(itemHover);
 					}
 					if(scrollDir == 'up') {
 						bottomView(i);
 					}
 				}
 			}
-
+			/*
+			 原点
+			 */
 
 
 			if(vartop < varscroll + topMargin){
@@ -101,12 +106,18 @@ function($) {
 					'margin-top': stickyHeight + stickyMarginB + currentMarginT + 'px'
 				}, 10);
 				$('.stuckMenu').css("position","fixed");
-				$('.isStuck').css({
+				$('.stuckMenu').css("margin","20px auto");
+                console.log('bbb');
+
+                $('.isStuck').css({
 					top: '0px'
 				}, 10, function(){
 
 				});
 			};
+			/*
+			开始滚动
+			 */
 
 			if(varscroll + topMargin < vartop){
 				$('.stuckMenu').removeClass('isStuck');
@@ -114,7 +125,10 @@ function($) {
 					'margin-top': currentMarginT + 'px'
 				}, 10);
 				$('.stuckMenu').css("position","relative");
-			};
+				console.log('aaa');
+                $('.stuckMenu').css("margin","20px auto");
+
+            };
 
 		});
 	});
