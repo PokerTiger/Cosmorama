@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color:#5f6567;
+    background-color:snow;
     font-family: "Andale Mono";
 }
 .top_photo{
@@ -12,7 +12,7 @@ body {
 }
 .title_photo {
     width: 100%;
-    color: white;
+    color: black;
     position: absolute;
     top: 150px;
     text-align: center;
