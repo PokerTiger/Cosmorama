@@ -3,8 +3,94 @@
 <head>
 	<meta charset="UTF-8">
 	<title>登陆</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 </head>
 <body>
-<h3>登陆</h3>
+<div class="image-container set-full-height">
+	<link rel="shortcut icon" href="images/cloud.png">
+	<a class="navbar-brand crawler-logo" href="/"><b class="app-name">一块木板</b></a>
+
+	<!--   Big container   -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 col-sm-offset-4">
+
+				<!--      Wizard container        -->
+				<div class="wizard-container">
+
+					<div class="card wizard-card plain-card animate-box" data-animate-effect="fadeIn" data-color="red" id="wizardProfile">
+
+						<form class="auth-login" method="POST">
+
+
+							<div class="wizard-header text-center">
+								<h3 class="wizard-title uppercase">Sign In</h3>
+							</div>
+
+							<div class="wizard-navigation">
+
+							</div>
+							<div class="tab-content">
+								<div class="tab-pane active" id="signin">
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group login-form">
+												<label class="sr-only">Email <small>(required)</small></label>
+												<input id="email-input" name="email" type="email" class="form-control" placeholder="email (required)">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group login-form">
+												<label class="sr-only">Password <small>(required)</small></label>
+												<input id="password-input" name="password" type="password" class="form-control " placeholder="password">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wizard-footer ">
+								<div class="pull-right ">
+									<input type='submit' class='btn btn-finish btn-danger2 login-btn' name='finish' value='Login' />
+								</div>
+								Not registered? <a href="/Home/Register">Sign up</a> <br> <a href="/Home/ResetAccount" class="footer-link">Forgot Your Password?</a>
+								<div class="clearfix "></div>
+							</div>
+						</form>
+
+
+						<!---->
+					</div>
+				</div>
+				<!-- wizard container -->
+			</div>
+		</div>
+		<!-- end row -->
+	</div>
+	<!--  big container -->
+
+	<div class="footer ">
+		<div class="container text-center ">
+
+		</div>
+	</div>
+</div>
+
+<div id="dialog" class="dialog">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<h2></h2>
+		<h4></h4>
+		<div></div>
+	</div>
+</div>
 </body>
 </html>
