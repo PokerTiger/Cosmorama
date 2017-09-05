@@ -7,20 +7,10 @@ body{
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-
-
-}
-.all_box{
 	background-image:url(../image/indexbk.jpg);
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	min-width: 1000px;
-	height: 100%;
-	font-weight: lighter;
-	color: #f8f7f9;
-	position: absolute;
+
 }
+
 .top{
 	color: white;
 	width: 100%;
@@ -230,3 +220,4 @@ ul.es-pager li:hover, ul.es-pager li.act {
 ul.es-pager li.act {
 	cursor: default;
 }
+
